@@ -1,23 +1,12 @@
-import { Header } from "@/components/header"
-import { HeroSection } from "@/components/hero-section"
-import { AboutSection } from "@/components/about-section"
-import { MapSection } from "@/components/map-section"
-import { BillboardsSection } from "@/components/billboards-section"
-import { ContactSection } from "@/components/contact-section"
-import { Footer } from "@/components/footer"
+import { Hero } from "@/components/Hero";
+import { Listing } from "@/components/Listing";
+import { INVENTORY } from "@/content/inventory";
 
-export default function HomePage() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <MapSection />
-        <BillboardsSection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
-  )
+    <main>
+      <Hero />
+      <Listing items={INVENTORY} />
+    </main>
+  );
 }
